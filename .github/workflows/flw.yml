@@ -22,6 +22,7 @@ jobs:
         FL_DHCASH: ${{ secrets.FL_DHCASH }}//签到活动兑换
         FL_flwydBODY: ${{ secrets.FL_flwydBODY }}//阅读
     steps:
+      - uses: actions/checkout@v1
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -32,7 +33,7 @@ jobs:
           npm install
       - name: '运行 【返利网】'
         run: |
-          node flw.js
+          node Task/flw.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
