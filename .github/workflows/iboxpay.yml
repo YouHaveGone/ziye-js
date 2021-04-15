@@ -27,11 +27,11 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.XP_REFRESHTOKEN
+        if: env.XP_refreshTOKEN
         run: |
           npm install
       - name: '运行 【笑谱】'
-        if: env.XP_REFRESHTOKEN
+        if: env.XP_refreshTOKEN
         run: |
           node Task/iboxpay.js
         env:
