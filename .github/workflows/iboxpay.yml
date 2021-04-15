@@ -31,7 +31,7 @@ jobs:
         run: |
           npm install
       - name: '运行 【笑谱】'
-        if: env.XP_iboxpayHEADER
+        if: env.XP_REFRESHTOKEN
         run: |
           node Task/iboxpay.js
         env:
